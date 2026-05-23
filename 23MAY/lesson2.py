@@ -16,6 +16,6 @@ while True:
     elif guess > answer:
         print("太大了！")
     else:
-        print(f"恭喜你猜對了！答案就是{answer}！")
+        print(f"恭喜你猜對了！答案就是{answer}！") #f-string 可以在字串中直接插入變數的值，使用大括號 {} 包住變數名稱
         print(f"你總共猜了 {count} 次。")
         break # 猜對了，跳出迴圈   

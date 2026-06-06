@@ -2,6 +2,7 @@
 #在終端機輸入uv add package_name (ex:uv add pandas)
 import requests
 import pandas as pd
+from pandas import DataFrame
 
 def main():
      #youbike即時資訊的Application Programming Interface (API) 網址
@@ -13,7 +14,7 @@ def main():
         data:list[dict] = response.json() # 把內容（JSON）轉成 Python 的 list/dict 結構
 
         # list[dict] -> DataFrame
-        df = pd.DataFrame(data) #把 list[dict] 轉成 DataFrame
+        df:DataFrame = pd.DataFrame(data) #把 list[dict] 轉成 DataFrame
 
         print(df.head())
 

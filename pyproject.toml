@@ -6,5 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "pandas>=3.0.3",
+    "pathlab>=0.2",
+    "reportlab>=4.5.1",
     "requests>=2.34.2",
 ]

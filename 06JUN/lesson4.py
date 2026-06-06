@@ -1,3 +1,5 @@
+#uv環境下安裝The Python Package Index (PyPI) 的套件
+#在終端機輸入uv add package_name (ex:uv add pandas)
 import requests
 import pandas as pd
 
@@ -8,10 +10,10 @@ def main():
     response = requests.get(url)
 
     if response.status_code == 200:
-        data = response.json()
+        data:list[dict] = response.json() # 把內容（JSON）轉成 Python 的 list/dict 結構
 
         # list[dict] -> DataFrame
-        df = pd.DataFrame(data)
+        df = pd.DataFrame(data) #把 list[dict] 轉成 DataFrame
 
         print(df.head())
 

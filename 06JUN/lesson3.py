@@ -1,18 +1,19 @@
 #uv環境下安裝The Python Package Index (PyPI) 的套件
 #在終端機輸入uv add package_name
 import requests
-
-#youbike即時資訊的Application Programming Interface (API) 網址
-url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+from requests import Response
 
 def main():
-    response = requests.get(url)
+    #youbike即時資訊的Application Programming Interface (API) 網址
+    url:str = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+    response:Response = requests.get(url)
 
-    if response.status_code == 200:
-        data = response.json()
+    if response.status_code == 200: #200代表成功 404代表找不到網頁 500代表伺服器錯誤
+        data:list[dict] = response.json()
         print("下載成功")
         print(type(data))
         print(len(data))
+        print(type(data[0]))
         print(data[0])
     else:
         print("下載失敗")

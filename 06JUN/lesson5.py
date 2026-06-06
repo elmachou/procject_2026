@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 from pathlib import Path
 
-
 def export_to_pdf(df: pd.DataFrame, output_path: Path) -> None:
     # 延遲匯入：只有真的要輸出 PDF 時才需要 reportlab
     try:
@@ -56,7 +55,7 @@ def export_to_pdf(df: pd.DataFrame, output_path: Path) -> None:
         col_widths = []
         for col in columns:
             if col in ("sna", "ar"):
-                col_widths.append(135)
+                col_widths.append(150)
             elif col == "mday":
                 col_widths.append(120)
             else:

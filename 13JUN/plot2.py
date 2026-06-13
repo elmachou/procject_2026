@@ -1,4 +1,4 @@
-# Tkinter 介面
+# Tkinter 介面 - 分數分布分析儀表板
 from __future__ import annotations
 
 from pathlib import Path

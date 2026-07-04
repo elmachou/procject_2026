@@ -5,10 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "jupyter>=1.1.1",
     "matplotlib>=3.11.0",
     "numpy>=2.4.6",
     "pandas>=3.0.3",
     "pathlab>=0.2",
+    "pyqtgraph>=0.14.0",
+    "pyside6>=6.11.1",
     "reportlab>=4.5.1",
     "requests>=2.34.2",
     "streamlit>=1.58.0",
